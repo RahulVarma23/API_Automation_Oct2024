@@ -4,8 +4,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class SampleTest {
-
+public class SampleTestNew {
     String BASE_URI = "https://reqres.in/api/users";
 
     @Test
@@ -15,7 +14,5 @@ public class SampleTest {
         Response response = given().baseUri(BASE_URI).body(employee).log().all().patch().then().extract().response();
 
         System.out.println("status code: "+response.statusCode());
-        System.out.println("Test Finished");
-
     }
 }
