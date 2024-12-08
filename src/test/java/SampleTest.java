@@ -6,10 +6,10 @@ import static io.restassured.RestAssured.given;
 
 public class SampleTest {
 
+    String BASE_URI = "https://reqres.in/api/users";
+
     @Test
     public void testPatchRequest() {
-        String BASE_URI = "https://reqres.in/api/users";
-
         Employee employee = new Employee("laxman", "qa" , 20);
 
         Response response = given().baseUri(BASE_URI).body(employee).log().all().patch().then().extract().response();

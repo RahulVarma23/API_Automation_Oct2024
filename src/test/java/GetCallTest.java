@@ -38,7 +38,6 @@ public class GetCallTest {
             map.put(fnames.get(i), lnames.get(i));
         }
         System.out.println(map);
-        System.out.println("---finish test");
     }
 
     @Test
