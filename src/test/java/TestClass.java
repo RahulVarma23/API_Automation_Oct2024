@@ -4,11 +4,14 @@ import model.Pet;
 import model.Tag;
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class PetApiTests {
+public class TestClass {
 
     @Test
     public void testPostRequestAddPet() {
@@ -38,6 +41,7 @@ public class PetApiTests {
         Response response = given().headers(map).baseUri(BASE_URI)
                 .body(pet).log().all().post().then().log().all().extract().response();
 
+        System.out.println("status code: "+response.statusCode());
         System.out.println("status code: "+response.statusCode());
 
 
