@@ -12,11 +12,10 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class TestClass {
+    String BASE_URI = "https://petstore.swagger.io/v2/pet";
 
     @Test
     public void testPostRequestAddPet() {
-        String BASE_URI = "https://petstore.swagger.io/v2/pet";
-
         Category category = Category.builder().id(100).name("animal").build();
         Tag tag1 = Tag.builder().id(10).name("fhnjfnjnf").build();
         Tag tag2 = Tag.builder().id(11).name("ffgg").build();
@@ -43,9 +42,5 @@ public class TestClass {
 
         System.out.println("status code: "+response.statusCode());
         System.out.println("status code: "+response.statusCode());
-
-
-
-
     }
 }

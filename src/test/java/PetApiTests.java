@@ -39,9 +39,5 @@ public class PetApiTests {
                 .body(pet).log().all().post().then().log().all().extract().response();
 
         System.out.println("status code: "+response.statusCode());
-
-
-
-
     }
 }
