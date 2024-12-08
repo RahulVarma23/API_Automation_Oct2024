@@ -15,7 +15,5 @@ public class SampleTest {
         Response response = given().baseUri(BASE_URI).body(employee).log().all().patch().then().extract().response();
 
         System.out.println("status code: "+response.statusCode());
-        System.out.println("Test Finished");
-
     }
 }
