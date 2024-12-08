@@ -25,7 +25,6 @@ public class AuthTest {
     public void testWithBasicAuth() {
         Response response = given().spec(requestSpecification).when().get().then().extract().response();
 
-        System.out.println(response.statusCode());
         Assert.assertEquals(response.statusCode(), 200, "status code is not matching");
     }
 }
