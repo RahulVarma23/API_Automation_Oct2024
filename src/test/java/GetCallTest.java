@@ -4,10 +4,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.File;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -29,7 +27,6 @@ public class GetCallTest {
                 .then().extract().response();
 
         Assert.assertEquals(response.statusCode(), 200, "response is not matching");
-       // JsonPath jsonPath = response.jsonPath();
 
         List<String> fnames = response.jsonPath().getList("data.first_name");
 
